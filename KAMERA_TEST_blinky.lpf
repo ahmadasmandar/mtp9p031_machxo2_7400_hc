@@ -6,6 +6,8 @@ LOCATE COMP "pnReset" SITE "55";              # active-low reset
 LOCATE COMP "pFPGA_LED_Green" SITE "128";    # green status LED
 LOCATE COMP "pFPGA_RX_FTDI" SITE "143";       # FT4232H DDBUS0 -> FPGA RX
 LOCATE COMP "pFPGA_TX_FTDI" SITE "142";       # FPGA TX -> FT4232H DDBUS1
+LOCATE COMP "pKAM_SDATA" SITE "24";          # BU111 pin 8, via J9 contact 21
+LOCATE COMP "pKAM_SCLK" SITE "25";           # BU111 pin 9, via J9 contact 20
 
 IOBUF ALLPORTS IO_TYPE=LVCMOS33 PULLMODE=NONE;
 FREQUENCY PORT "pClock" 48.000 MHz;
