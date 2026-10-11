@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BaliProject version="3.2" title="KAMERA_TEST" device="LCMXO2-7000HC-5TG144C" default_implementation="impl1">
+<BaliProject version="3.2" title="KAMERA_TEST" device="LCMXO2-7000HC-4TG144C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
     <Options def_top="top" top="top"/>
         <Source name="top.vhd" type="VHDL" type_short="VHDL">
             <Options top_module="top"/>
+        </Source>
+        <Source name="modules/uart.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
         </Source>
         <Source name="KAMERA_TEST_blinky.lpf" type="Logic Preference" type_short="LPF">
             <Options/>

@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/asmandar/Desktop/KAMERA_TEST/impl1/KAMERA_TEST_impl1.jed</File>
-			<FileTime>10/11/26 08:32:53</FileTime>
-			<JedecChecksum>0xCC85</JedecChecksum>
+			<FileTime>10/11/26 09:34:28</FileTime>
+			<JedecChecksum>0x6AF5</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

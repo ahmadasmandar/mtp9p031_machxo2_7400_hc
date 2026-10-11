@@ -4,6 +4,8 @@ rvl_alias "pClock" "pClock";
 LOCATE COMP "pClock" SITE "49";              # 48 MHz board oscillator
 LOCATE COMP "pnReset" SITE "55";              # active-low reset
 LOCATE COMP "pFPGA_LED_Green" SITE "128";    # green status LED
+LOCATE COMP "pFPGA_RX_FTDI" SITE "143";       # FT4232H DDBUS0 -> FPGA RX
+LOCATE COMP "pFPGA_TX_FTDI" SITE "142";       # FPGA TX -> FT4232H DDBUS1
 
 IOBUF ALLPORTS IO_TYPE=LVCMOS33 PULLMODE=NONE;
 FREQUENCY PORT "pClock" 48.000 MHz;

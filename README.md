@@ -5,7 +5,7 @@ design blinks the FPGA green LED at 1 Hz.
 
 ## Hardware and project
 
-- Device: `LCMXO2-7000HC-5TG144`
+- Device: `LCMXO2-7000HC-4TG144C` (per supplied board schematic)
 - Toolchain: Lattice Diamond 3.14 or a compatible installation
 - Top-level VHDL entity: `top`
 - Clock: 48 MHz
@@ -54,7 +54,7 @@ configuration. The build scripts use a temporary workspace under
 The minimum programming outputs are:
 
 - `impl1/KAMERA_TEST_impl1.jed` — FPGA configuration image
-- `program_xcf.xcf` — programmer configuration
+- `impl1/KAMERA_TEST_impl1.xcf` — programmer configuration refreshed by the build
 
 ## Programming
 
@@ -72,3 +72,26 @@ Lattice Diamond programmer tools.
 The project also provides tasks for synthesis checking, full build, JEDEC
 programming, build-output validation, and opening the Diamond project. See
 [`scripts/README.md`](scripts/README.md) for the task names and details.
+
+## J12 debug UART
+
+The current top level connects the reusable [`modules/uart.vhd`](modules/uart.vhd)
+to the FT4232H USB serial channel on J12. Open the corresponding serial port at
+**1,000,000 baud, 8 data bits, no parity, 1 stop bit, no flow control**. Characters
+sent from the PC are echoed back. The FPGA also sends `Hello world` followed by
+CR/LF once per second; the green LED continues to blink. Turn off local echo in
+the terminal to see each typed character once.
+
+| FPGA port | FPGA package site | FT4232H connection | Direction |
+|---|---:|---|---|
+| `pFPGA_RX_FTDI` | 143 | DDBUS0, pin 48 | PC to FPGA |
+| `pFPGA_TX_FTDI` | 142 | DDBUS1, pin 52 | FPGA to PC |
+
+The UART has byte-level `tx_data`/`tx_valid`/`tx_ready` and
+`rx_data`/`rx_valid` signals so future debug logic can send status bytes. The
+current top level has a one-byte echo buffer; it is intended for terminal
+testing, not sustained streaming. J12 is the USB connector on the board, while
+the FPGA sees ordinary 3.3 V UART signals through the FT4232H.
+
+The Diamond target follows the supplied board schematic's `-4` speed grade.
+Check the marking on the populated FPGA if the hardware revision differs.

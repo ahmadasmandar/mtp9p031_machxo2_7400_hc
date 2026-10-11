@@ -1,6 +1,6 @@
 # Lattice Diamond generated implementation outputs
 impl1/
-build/
+/build/
 *.jed
 *.bit
 *.bin

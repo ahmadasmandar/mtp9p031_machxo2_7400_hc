@@ -27,7 +27,7 @@ green LED at 1 Hz.
 After `FPGA: Build`, the minimum files needed for programming are:
 
 - `impl1/KAMERA_TEST_impl1.jed` — generated FPGA configuration image.
-- `program_xcf.xcf` — programmer configuration, updated with the JEDEC path, timestamp, and checksum.
+- `impl1/KAMERA_TEST_impl1.xcf` — programmer configuration, updated with the JEDEC path, timestamp, and checksum.
 
 The build is performed under `C:\Temp\FPGA_Build\KAMERA_TEST\<timestamp>`;
 only the release artifacts and reports are copied into `impl1`.
