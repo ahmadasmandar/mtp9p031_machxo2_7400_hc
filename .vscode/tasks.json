@@ -1,0 +1,98 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FPGA: Build and Program",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build\\build-program-temp.ps1",
+        "-DiamondRoot",
+        "${config:lattice.diamondRoot}"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "FPGA: Build",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build\\build-program-temp.ps1",
+        "-DiamondRoot",
+        "${config:lattice.diamondRoot}"
+        ,"-SkipProgram"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "FPGA: Synthesis Check",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build\\build.ps1",
+        "-Mode",
+        "Synthesis",
+        "-DiamondRoot",
+        "${config:lattice.diamondRoot}"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "FPGA: Open Diamond Project",
+      "type": "shell",
+      "command": "${config:lattice.diamondRoot}/bin/nt64/pnmain.exe",
+      "args": ["${workspaceFolder}/KAMERA_TEST.ldf"],
+      "problemMatcher": []
+    },
+    {
+      "label": "FPGA: Program JEDEC",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build\\program.ps1",
+        "-DiamondRoot",
+        "${config:lattice.diamondRoot}"
+      ],
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    },
+    {
+      "label": "FPGA: Check Build Outputs",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\build\\check_build.ps1"
+      ],
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true }
+    }
+  ]
+}

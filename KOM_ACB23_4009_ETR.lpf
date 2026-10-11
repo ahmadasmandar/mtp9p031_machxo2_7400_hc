@@ -1,0 +1,134 @@
+rvl_alias "pClock" "pClock";
+######################################################################
+# Pin placement constraints
+######################################################################
+
+# GPIO_LEFT
+LOCATE COMP "pM_32_CR" SITE "115";              # GPIO_Left_00
+LOCATE COMP "pM_72_CR" SITE "114";              # GPIO_Left_01
+LOCATE COMP "pM_32_CLK" SITE "119";             # GPIO_Left_02
+LOCATE COMP "pM_72_CLK" SITE "117";             # GPIO_Left_03
+LOCATE COMP "pM_32_DIR" SITE "121";             # GPIO_Left_04
+LOCATE COMP "pM_72_DIR" SITE "120";             # GPIO_Left_05
+LOCATE COMP "pM_32_EN" SITE "125";              # GPIO_Left_06
+LOCATE COMP "pM_72_EN" SITE "122";              # GPIO_Left_07
+# LOCATE COMP "UNUSED" SITE "127";              # GPIO_Left_08
+# LOCATE COMP "UNUSED" SITE "126";              # GPIO_Left_09
+
+# GPIO_TOP
+LOCATE COMP "pKAM_TRIGGER" SITE "22";           # GPIO_Top_00
+LOCATE COMP "pKAM_SDATA" SITE "24";             # GPIO_Top_01
+LOCATE COMP "pXP_RST" SITE "26";                # GPIO_Top_02
+LOCATE COMP "pXP_IN" SITE "28";                 # GPIO_Top_03
+LOCATE COMP "pSW_START_SN" SITE "32";           # GPIO_Top_04
+LOCATE COMP "pLED_START" SITE "34";             # GPIO_Top_05
+LOCATE COMP "pLED_ERR" SITE "38";               # GPIO_Top_06
+LOCATE COMP "pLED_RDY" SITE "40";               # GPIO_Top_07
+LOCATE COMP "pKAM_LINE" SITE "2";               # GPIO_Top_08
+LOCATE COMP "pKAM_FRAME" SITE "4";              # GPIO_Top_09
+LOCATE COMP "pKAM_D[11]" SITE "6";              # GPIO_Top_10
+LOCATE COMP "pKAM_D[9]" SITE "10";              # GPIO_Top_11
+LOCATE COMP "pKAM_D[7]" SITE "12";              # GPIO_Top_12
+LOCATE COMP "pKAM_D[5]" SITE "14";              # GPIO_Top_13
+LOCATE COMP "pKAM_D[3]" SITE "17";              # GPIO_Top_14
+LOCATE COMP "pKAM_D[1]" SITE "20";              # GPIO_Top_15
+LOCATE COMP "pKAM_D[0]" SITE "21";              # GPIO_Top_16
+LOCATE COMP "pKAM_STROBE" SITE "23";            # GPIO_Top_17
+LOCATE COMP "pKAM_SCLK" SITE "25";              # GPIO_Top_18
+LOCATE COMP "pXP_OUT" SITE "27";                # GPIO_Top_19
+LOCATE COMP "pSW_STOP_SN" SITE "31";            # GPIO_Top_20
+LOCATE COMP "pLED_STOP" SITE "33";              # GPIO_Top_21
+LOCATE COMP "pLED_LSO" SITE "35";               # GPIO_Top_22
+LOCATE COMP "pLED_KAM" SITE "39";               # GPIO_Top_23
+# LOCATE COMP "UNUSED" SITE "1";                # GPIO_Top_24
+LOCATE COMP "pKAM_MCLK" SITE "3";               # GPIO_Top_25
+LOCATE COMP "pKAM_D[10]" SITE "5";              # GPIO_Top_26
+LOCATE COMP "pKAM_D[8]" SITE "9";               # GPIO_Top_27
+LOCATE COMP "pKAM_D[6]" SITE "11";              # GPIO_Top_28
+LOCATE COMP "pKAM_D[4]" SITE "13";              # GPIO_Top_29
+LOCATE COMP "pKAM_D[2]" SITE "15";              # GPIO_Top_30
+LOCATE COMP "pKAM_PIXCLK" SITE "19";            # GPIO_Top_31
+
+# GPIO_BOTTOM
+LOCATE COMP "pM_62_CR" SITE "112";              # GPIO_Bottom_00
+LOCATE COMP "pM_62_DIR" SITE "110";             # GPIO_Bottom_01
+LOCATE COMP "pM_42_CR" SITE "107";              # GPIO_Bottom_02
+LOCATE COMP "pM_42_DIR" SITE "105";             # GPIO_Bottom_03
+LOCATE COMP "pM_52_CR" SITE "103";              # GPIO_Bottom_04
+LOCATE COMP "pM_52_DIR" SITE "99";              # GPIO_Bottom_05
+LOCATE COMP "pM_81_EN" SITE "97";               # GPIO_Bottom_06
+# LOCATE COMP "UNUSED" SITE "95";               # GPIO_Bottom_07
+# LOCATE COMP "UNUSED" SITE "93";               # GPIO_Bottom_08
+LOCATE COMP "pLASER_101" SITE "91";             # GPIO_Bottom_09
+# LOCATE COMP "UNUSED" SITE "87";               # GPIO_Bottom_10
+LOCATE COMP "pE_71_AI" SITE "85";               # GPIO_Bottom_11
+LOCATE COMP "pE_71_AB" SITE "83";               # GPIO_Bottom_12
+LOCATE COMP "pE_71_AA" SITE "81";               # GPIO_Bottom_13
+LOCATE COMP "pE_61_AI" SITE "77";               # GPIO_Bottom_14
+LOCATE COMP "pE_61_AB" SITE "75";               # GPIO_Bottom_15
+LOCATE COMP "pE_61_AA" SITE "73";               # GPIO_Bottom_16
+LOCATE COMP "pE_31_AI" SITE "70";               # GPIO_Bottom_17
+LOCATE COMP "pE_31_AB" SITE "68";               # GPIO_Bottom_18
+LOCATE COMP "pE_31_AA" SITE "65";               # GPIO_Bottom_19
+LOCATE COMP "pNL_TC_82" SITE "62";              # GPIO_Bottom_20
+LOCATE COMP "pNL_LC_43" SITE "60";              # GPIO_Bottom_21
+LOCATE COMP "pPL_TC_83" SITE "58";              # GPIO_Bottom_22
+LOCATE COMP "pPL_LC_44" SITE "56";              # GPIO_Bottom_23
+LOCATE COMP "pADC1_BUSY" SITE "52";             # GPIO_Bottom_24
+LOCATE COMP "pADC2_BUSY" SITE "48";             # GPIO_Bottom_25
+LOCATE COMP "pADC1_DCLK" SITE "45";             # GPIO_Bottom_26
+LOCATE COMP "pADC1_DIN" SITE "43";              # GPIO_Bottom_27
+LOCATE COMP "pADC2_CS" SITE "41";               # GPIO_Bottom_28
+LOCATE COMP "pM_62_CLK" SITE "113";             # GPIO_Bottom_29
+LOCATE COMP "pM_62_EN" SITE "111";              # GPIO_Bottom_30
+LOCATE COMP "pM_42_CLK" SITE "109";             # GPIO_Bottom_31
+LOCATE COMP "pM_42_EN" SITE "106";              # GPIO_Bottom_32
+LOCATE COMP "pM_52_CLK" SITE "104";             # GPIO_Bottom_33
+LOCATE COMP "pM_52_EN" SITE "100";              # GPIO_Bottom_34
+# LOCATE COMP "UNUSED" SITE "98";               # GPIO_Bottom_35
+# LOCATE COMP "UNUSED" SITE "96";               # GPIO_Bottom_36
+LOCATE COMP "pLASER_IL_102" SITE "94";          # GPIO_Bottom_37
+LOCATE COMP "pLASER_103" SITE "92";             # GPIO_Bottom_38
+# LOCATE COMP "UNUSED" SITE "89";               # GPIO_Bottom_39
+LOCATE COMP "pE_71_OUTI" SITE "86";             # GPIO_Bottom_40
+LOCATE COMP "pE_71_OUTB" SITE "84";             # GPIO_Bottom_41
+LOCATE COMP "pE_71_OUTA" SITE "82";             # GPIO_Bottom_42
+LOCATE COMP "pE_61_OUTI" SITE "78";             # GPIO_Bottom_43
+LOCATE COMP "pE_61_OUTB" SITE "76";             # GPIO_Bottom_44
+LOCATE COMP "pE_61_OUTA" SITE "74";             # GPIO_Bottom_45
+LOCATE COMP "pE_31_OUTI" SITE "71";             # GPIO_Bottom_46
+LOCATE COMP "pE_31_OUTB" SITE "69";             # GPIO_Bottom_47
+LOCATE COMP "pE_31_OUTA" SITE "67";             # GPIO_Bottom_48
+LOCATE COMP "pNL_LS_53" SITE "63";              # GPIO_Bottom_49
+LOCATE COMP "pNL_LP_33" SITE "61";              # GPIO_Bottom_50
+LOCATE COMP "pPL_LS_54" SITE "59";              # GPIO_Bottom_51
+LOCATE COMP "pPL_LP_34" SITE "57";              # GPIO_Bottom_52
+LOCATE COMP "pADC1_DOUT" SITE "54";             # GPIO_Bottom_53
+LOCATE COMP "pADC2_DOUT" SITE "50";             # GPIO_Bottom_54
+LOCATE COMP "pADC1_CS" SITE "47";               # GPIO_Bottom_55
+LOCATE COMP "pADC2_DCLK" SITE "44";             # GPIO_Bottom_56
+LOCATE COMP "pADC2_DIN" SITE "42";              # GPIO_Bottom_57
+        
+# General      
+LOCATE COMP "pClock" SITE "49";
+LOCATE COMP "pnReset" SITE "55";
+LOCATE COMP "pFPGA_RX_FTDI" SITE "143";
+LOCATE COMP "pFPGA_TX_FTDI" SITE "142";
+LOCATE COMP "pmC_TX_FPGA" SITE "141";
+LOCATE COMP "pmC_RX_FPGA" SITE "140";
+LOCATE COMP "pCM_TX_FPGA" SITE "139";
+LOCATE COMP "pCM_RX_FPGA" SITE "138";
+LOCATE COMP "pFPGA_State" SITE "133";
+LOCATE COMP "pFPGA_LED_Red" SITE "132";
+LOCATE COMP "pFPGA_LED_Green" SITE "128";
+
+######################################################################
+# IO standard constraints
+######################################################################
+IOBUF ALLPORTS IO_TYPE=LVCMOS33 PULLMODE=NONE ;
+######################################################################
+# frequency constraints
+######################################################################
+FREQUENCY PORT "pClock" 48.000 MHz;
+GSR_NET NET "pnReset_c";
+USE PRIMARY NET "pClock" ;

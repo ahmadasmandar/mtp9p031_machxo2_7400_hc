@@ -1,0 +1,35 @@
+# Lattice Diamond generated implementation outputs
+impl1/
+build/
+*.jed
+*.bit
+*.bin
+*.ncd
+*.ngd
+*.mrp
+*.prf
+*.twr
+*.par
+*.rpt
+*.log
+*.dir/
+.vdbs/
+*_impl1/
+
+# Temporary build workspaces and editor artifacts
+*.tmp
+*.swp
+*.swo
+*~
+.idea/
+.vscode/*.user
+
+# Generated project metadata, while keeping canonical source inputs
+*.ini
+*.xml
+*.ccl
+*.tcr
+!KAMERA_TEST.ldf
+!KAMERA_TEST1.sty
+!KAMERA_TEST_blinky.lpf
+!program_xcf.xcf

@@ -1,0 +1,10 @@
+rvl_alias "pClock" "pClock";
+
+# Minimal constraints for the standalone blinky test.
+LOCATE COMP "pClock" SITE "49";              # 48 MHz board oscillator
+LOCATE COMP "pnReset" SITE "55";              # active-low reset
+LOCATE COMP "pFPGA_LED_Green" SITE "128";    # green status LED
+
+IOBUF ALLPORTS IO_TYPE=LVCMOS33 PULLMODE=NONE;
+FREQUENCY PORT "pClock" 48.000 MHz;
+USE PRIMARY NET "pClock";
